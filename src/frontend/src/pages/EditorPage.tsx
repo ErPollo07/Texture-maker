@@ -8,8 +8,10 @@ const EditorPage: React.FC = () => {
   return (
     <>
       <Toolbar />
-      <Explorer />
-      <Editor />
+      <div className="container" id="container">
+        <Explorer />
+        <Editor /> 
+      </div>
     </>
   );
 };

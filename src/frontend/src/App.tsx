@@ -3,13 +3,13 @@ import React from 'react'
 import './App.css'
 import { HashRouter } from 'react-router-dom'
 import AppRoutes from './routes/AppRoutes'
-import NavButtons from './components/NavButtons'
+import NavWrapper from './components/NavWrapper'
 
 const App: React.FC = () => {
   return (
     <HashRouter>
       {/* Bottoni di navigazione tra le pagine */}
-      <NavButtons />
+      <NavWrapper />
       {/* Gestione delle rotte */}
       <AppRoutes />
     </HashRouter>

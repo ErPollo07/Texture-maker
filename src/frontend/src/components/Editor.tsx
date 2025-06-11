@@ -2,10 +2,10 @@ import React from "react";
 
 const Editor: React.FC = () => {
   return (
-    <div>
-      <h2>Editor</h2>
-      <p>Qui andrà l'editor per modificare il progetto.</p>
-      {/* Qui andrà il codice dell'editor */}
+    <div className="editor">
+      <div id="pixel-canvas-container">
+        <canvas id="pixel-canvas"></canvas>
+      </div>
     </div>
   );
 };
