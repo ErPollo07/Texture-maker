@@ -3,16 +3,17 @@ import React from 'react';
 import Toolbar from '../components/Toolbar';
 import Explorer from '../components/Explorer';
 import Editor from '../components/Editor';
+import { EditorToolsProvider } from '../context/EditorToolsContext';
 
 const EditorPage: React.FC = () => {
   return (
-    <>
+    <EditorToolsProvider>
       <Toolbar />
       <div className="container" id="container">
         <Explorer />
-        <Editor /> 
+        <Editor />
       </div>
-    </>
+    </EditorToolsProvider>
   );
 };
 
