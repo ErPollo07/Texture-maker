@@ -21,6 +21,10 @@ ipcMain.handle("open-folder", async () => {
   return result;
 });
 
+ipcMain.handle("open-project", async (event, folderPath) => {
+  return { success: true, path: folderPath };
+});
+
 app.on("ready", () => {
   createWindow();
 });

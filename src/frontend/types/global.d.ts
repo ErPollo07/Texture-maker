@@ -7,6 +7,7 @@ declare global {
   interface Window {
     electronAPI?: {
       openFolder?: () => Promise<any>;
+      openProject?: (folderPath: string) => Promise<any>;
       // Add other exposed methods here if needed
     };
   }

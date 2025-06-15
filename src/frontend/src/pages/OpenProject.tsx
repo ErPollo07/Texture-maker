@@ -44,9 +44,7 @@ const OpenProject: React.FC = () => {
       return;
     }
     // TODO: Add logic to open the project with the selected folder
-    // For now, just clear the error
-    setError(null);
-    // Example: window.electronAPI.openProject(folderPath)
+    window.electronAPI?.openProject?.(folderPath);
   };
 
   return (

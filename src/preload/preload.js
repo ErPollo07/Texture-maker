@@ -9,5 +9,7 @@ contextBridge.exposeInMainWorld("electronAPI", {
     // This will trigger the main process to open a dialog and return the result
     return await ipcRenderer.invoke("open-folder");
   },
+  openProject: async (folderPath) =>
+    await ipcRenderer.invoke("open-project", folderPath),
   // You can add more APIs here if needed
 });
