@@ -1,20 +1,60 @@
 import React from "react";
+import css from "../css/Explorer.module.css";
 
-const Editor: React.FC = () => {
+// Example folder structure (replace with your JSON data)
+const folderStructure = {
+  name: "root",
+  type: "folder",
+  children: [
+    {
+      name: "textures",
+      type: "folder",
+      children: [
+        {
+          name: "blocks",
+          type: "folder",
+          children: [
+            { name: "stone.png", type: "file" },
+            { name: "dirt.png", type: "file" }
+          ]
+        }
+      ]
+    },
+    { name: "pack.mcmeta", type: "file" }
+  ]
+};
+
+const Explorer: React.FC = () => {
   return (
-    <div className="explorer">
-      <div id="explorer-header">
-        <div id="pack-name"></div>
-        <button id="delete-button">
-          <img src="../assets/icons/delete-file.svg" alt="Delete" />
-        </button>
+    <div className={css.explorer}>
+      {/* Header with root name and action buttons */}
+      <div className={css["explorer-header"]}>
+        <span className={css["explorer-root-name"]}>{folderStructure.name}</span>
+        <div className={css["explorer-actions"]}>
+          {/* Add file */}
+          <button title="Add file">
+            <span>📄</span>
+          </button>
+          {/* Add folder */}
+          <button title="Add folder">
+            <span>📁</span>
+          </button>
+          {/* Refresh */}
+          <button title="Refresh">
+            <span>🔄</span>
+          </button>
+          {/* Collapse all */}
+          <button title="Collapse all">
+            <span>➖</span>
+          </button>
+        </div>
       </div>
-      <div id="folder-tree"></div>
-      <div className="refresh-container">
-        <button id="render-button">REFRESH</button>
+      {/* Folder tree placeholder */}
+      <div className={css["explorer-tree"]}>
+        {/* Qui verrà renderizzata la struttura delle cartelle */}
       </div>
     </div>
   );
 };
 
-export default Editor;
+export default Explorer;
