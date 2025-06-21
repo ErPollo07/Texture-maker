@@ -11,7 +11,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/create" element={<CreateProject />} />
     <Route path="/open" element={<OpenProject />} />
     <Route path="/editor" element={<EditorPage />} />
-    <Route path='/test' element={<CanvasTest />} />
+    <Route path='/test' element={<CanvasTest />} /> {/* TEST */}
     {/* Any other route redirects to /open */}
     <Route path="*" element={<Navigate to="/open" replace />} />
   </Routes>
