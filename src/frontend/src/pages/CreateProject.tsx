@@ -18,23 +18,23 @@ const CreateProject: React.FC = () => {
 
   return (
     <div>
-      <h2>Crea un nuovo progetto</h2>
+      <h2>Create new project</h2>
       {/* Form for creating a new project */}
       <form>
         <div>
           {/* Input for the project name */}
-          <label htmlFor="projectName">Nome progetto:</label>
+          <label htmlFor="projectName">Project name</label>
           <input
             id="projectName"
             type="text"
             value={projectName}
             onChange={e => setProjectName(e.target.value)} // Update projectName state on change
-            placeholder="Inserisci il nome del progetto"
+            placeholder="Insert the project name"
           />
         </div>
         <div>
           {/* Dropdown for selecting the Minecraft version */}
-          <label htmlFor="version">Versione Minecraft:</label>
+          <label htmlFor="version">Minecraft version:</label>
           <select
             id="version"
             value={version}
@@ -48,7 +48,7 @@ const CreateProject: React.FC = () => {
           </select>
         </div>
         {/* Button to submit the form and create the project */}
-        <button type="submit">Crea progetto</button>
+        <button type="submit">Create project</button>
       </form>
     </div>
   );
